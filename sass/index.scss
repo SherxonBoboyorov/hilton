@@ -1,0 +1,1220 @@
+@import "files/color";
+@import "files/fonts";
+@import "files/mixins";
+
+
+body {
+  font-family: 'Gotham Pro', serif;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+// header start
+
+
+  .header {
+    @extend%transition;
+    position: relative;
+
+    &__top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      li+li {
+        margin-left: 70px;
+      }
+    }
+
+    &__link {
+      padding: 60px 0;
+      position: relative;
+      display: inline-block;
+      @include fontAll(18px, 400, $link);
+      line-height: 17px;
+
+
+      @extend%transition;
+
+      &::after{
+          content: "";
+          display: none;
+          width: 100%;
+          height: 6px;
+          @extend%transition;
+          background-color: $red;
+          position: absolute;
+          bottom: 0;
+      }
+
+      &:hover{
+          color: $red;
+      }
+
+    }
+
+
+    &__max_mrx{
+      position: fixed;
+      background-color: #FFFFFF;
+      width: 100%;
+      height: auto;
+      z-index: 20;
+      top: 0;
+      border-bottom: 2px solid $fon;
+  }
+
+  &__logo {
+    @include fiximg(220px, 76px, true);
+  }
+
+
+  }
+
+  .header__mrx__max__burger {
+    display: none;
+  }
+
+  .header__menu li:hover > .header__link::after{
+    display: block;
+  }
+
+
+  .menu__burger__x{
+    display: none;
+  }
+
+  .header__menu__burger{
+    @include fontAll(20px,500,$link);
+  }  
+
+// header end
+
+
+
+// slaeder start
+
+.slaeder{
+  position: relative;
+  margin-bottom: 100px;
+
+  &__item{
+      width: 100%;
+      height: 800px;
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+
+  &__pro{
+      position: relative;
+      height: 800px;
+  }
+
+  &__item__text{
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(0,-50%);
+      -webkit-transform: translate(0,-50%);
+      -moz-transform: translate(0,-50%);
+      -ms-transform: translate(0,-50%);
+      -o-transform: translate(0,-50%);
+  }
+
+  &__title__h2{
+      @include fontAll(90px,normal,#fff);
+      text-transform: uppercase;
+      position: relative;
+      font-family: 'Roboto Slab', serif;
+      margin-bottom: 20px;
+    
+
+      &::before{
+          display: inline-block;
+          content: "";
+          width: 18px;
+          height: 18px;
+          background-color: $red;
+          position: absolute;
+          left: 0;
+          bottom: -19px;
+
+      }
+  }
+
+  &__text{
+      @include fontAll(20px,normal, $oq);
+      line-height: 30px;
+      padding-top: 15px;
+
+  }
+
+  &__top{
+      .slick-arrow{
+          font-size: 0;
+          background-color: transparent;
+      }
+
+      .slick-prev{
+          background-image: url(../foto/left.png);
+          background-repeat: no-repeat;
+          background-size: contain;
+          width: 26px;
+          height: 53px;
+          position: absolute;
+          top: 50%;
+          left: 20px;
+          z-index: 1;
+          transform: translate(0,-50%);
+          -webkit-transform: translate(0,-50%);
+          -moz-transform: translate(0,-50%);
+          -ms-transform: translate(0,-50%);
+          -o-transform: translate(0,-50%);
+          @extend%transition;
+          &:hover{
+              opacity: 0.4;
+          }
+      }
+
+      .slick-next{
+          background-image: url(../foto/right.png);
+          background-repeat: no-repeat;
+          background-size: contain;
+          width: 26px;
+          height: 53px;
+          position: absolute;
+          top: 50%;
+          right: 20px;
+          z-index: 1;
+          transform: translate(0,-50%);
+          -webkit-transform: translate(0,-50%);
+          -moz-transform: translate(0,-50%);
+          -ms-transform: translate(0,-50%);
+          -o-transform: translate(0,-50%);
+          @extend%transition;
+          &:hover{
+              opacity: 0.4;
+          }
+      }
+  }
+}
+
+// slaeder emd
+
+
+
+
+// about start
+
+.about {
+
+  margin-bottom: 180px;
+    
+  &__title {
+      @include fontAll(48px, 500, $text);
+      line-height: 52px;
+      font-family: 'Roboto Slab', serif;
+      position: relative;
+      padding-left: 46px;
+      margin-bottom: 30px;
+
+      &::before{
+        display: inline-block;
+        background-color: $red;
+        content: "";
+        width: 18px;
+        height: 18px;
+        position: absolute;
+        left: 0;
+        bottom: 5px;
+    }
+  }
+
+    &__text {
+      @include fontAll(16px, 400, $text);
+      line-height: 30px;
+
+      span {
+         font-family: 'Roboto Slab', serif;
+         @include fontAll(16px, 700, $red);
+
+      }
+
+    }
+
+    &__image {
+       @include fiximg(760px, 640px, true);
+       position: initial;
+       img {
+         position: absolute;
+         width: 760px;
+         height: 640px;
+         right: 0;
+         object-fit: cover;
+       }
+
+    }
+
+    &__item {
+      width: 55%;
+      flex: 0 0 55%;
+    }
+
+    &__top {
+      display: flex;
+      align-items: center;
+      grid-gap: 20px;
+      
+    }
+
+    &__item2 {
+      width: 50%;
+      flex: 0 0 50%;
+    }
+
+    
+  }
+
+// about end
+
+
+// hilton start
+
+.hilton {
+  position: relative;
+  margin-bottom: 100px;
+
+  &__max {
+     position: relative;
+     margin-bottom: 20px;
+  }
+   
+  &__image {
+     @include fiximg(100%, 360px, true);
+     position: relative;
+  }
+
+  &__title__h4 {
+     @include fontAll(16px, 400, $oq);
+     position: absolute;
+     right: 0;
+     bottom: 0;
+     background-color: rgba(0, 0, 0, 0.6);
+     padding: 10px 15px;
+  }
+
+  &__title__h2 {
+      @include fontAll(24px, 400, #373435);
+      line-height: 100%;
+      padding-bottom: 20px;
+  }
+
+  &__title__h3 {
+    @include fontAll(14px, 400, #373435);
+    line-height: 24px;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+
+  }
+
+  &__menu {
+     display: flex;
+     align-items: center;
+     grid-gap: 25px;
+     flex-wrap: wrap;
+     li {
+       display: flex;
+       align-items: center;
+       grid-gap: 10px;
+
+     }
+  }
+
+  &__item {
+    width: 46%;
+  }
+
+  &__menu__item {
+
+    img {
+        width: 24px;
+        height: 24px
+    }
+     h5 {
+        @include fontAll(16px, 400, $text);
+        list-style: 24px;
+
+     }
+  }
+
+  &__top {
+    display: flex; 
+    align-items: flex-start;
+    flex-wrap: wrap;
+    grid-gap: 60px;
+    justify-content: space-between;
+  }
+}
+
+
+// hilton end
+
+// Our_services start
+
+
+.Our_services  {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    padding-top: 85px;
+    padding-bottom: 100px;
+    margin-bottom: 85px;
+
+    &__title__h2 {
+      color: $oq;
+    }
+
+    &__image {
+      @include fiximg(660px, 360px, true);
+      flex: 0 0 50%;
+    }
+
+    &__item {
+      display: flex;
+      align-items: center;
+    }
+
+    &__title__3 {
+        @include fontAll(24px, 400, $oq);
+        line-height: 100%;
+        position: relative;
+        margin-bottom: 25px;
+
+        &::before{
+          display: inline-block;
+          content: "";
+          background-color: $red;
+          width: 30px;
+          height: 18px;
+          position: absolute;
+          left: -50px;
+          top: 50%;
+          transform: translate(0,-50%);
+          -webkit-transform: translate(0,-50%);
+          -moz-transform: translate(0,-50%);
+          -ms-transform: translate(0,-50%);
+          -o-transform: translate(0,-50%);
+      }
+    }
+
+    &__text {
+      @include fontAll(16px, 400, $oq);
+      line-height: 30px;
+    }
+
+
+    &__border {
+       border: 2px solid rgba(255, 255, 255, 0.4);
+       padding: 45px 70px 45px 50px;
+    }
+}
+
+.Our_services__item+.Our_services__item{
+  margin-top: 60px;
+}
+ 
+.Our_services__item:nth-child(even){
+      flex-direction: row-reverse;
+}
+
+
+// Our_services end
+
+
+
+// Our_partners start
+
+
+
+.Our_partners  {
+
+  margin-bottom: 60px;
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    width: 305px;
+    height: 180px;
+    position: relative;
+
+  }
+
+  &__image {
+    width: 200px;
+    min-height: 57px;
+    max-height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+
+
+
+// Our_partners end
+
+
+
+//footer start
+
+.footer{
+  position: relative;
+  background-color: $fon;
+  padding: 80px 0;
+  width: 100%;
+  height: auto;
+
+  &__menu__icons{
+      max-width: 200px;
+      display: flex;
+      margin-top: 40px;
+      align-items: center;
+      justify-content: space-between;
+  }
+
+  &__icon__link{
+      @include fontAll(20px,400,#fff);
+      background-color: rgba(255, 255, 255, 0.2);
+      width: 34px;
+      height: 34px;
+      text-align: center;
+      line-height: 35px;
+      display: inline-block;
+      @extend%transition;
+
+      &:hover{
+          background-color: $red;
+      }
+  }
+
+  &__top{
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+  }
+
+  &__item__link{
+      @include fontAll(14px, 400,#fff);
+      line-height: 22px;
+      max-width: 200px;
+      display: flex;
+      align-items: flex-start;
+      span{
+          color: $text;
+          margin-right: 10px;
+          margin-top: 5px;
+          line-height: 100%;
+      }
+  }
+
+  &__item__menu__link{
+      li+li{
+          margin-top: 40px;
+      }
+  }
+
+  &__item__form{
+      display: flex;
+      width: 580px;
+      align-items: center;
+      grid-gap: 20px;
+      margin-bottom: 20px;
+  }
+
+  &__item__input{
+      outline: none;
+      border: none;
+      padding: 10px 20px;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+      background-color: transparent;
+      height: 40px;
+      width: 280px;
+      @include fontAll(14px,400,#fff);
+      &::placeholder{
+        @include fontAll(14px,400,rgba(255, 255, 255, 0.7));
+      }
+  }
+
+  &__item__textarea{
+    border: none;
+      background-color: transparent;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+      width: 100%;
+      resize: none;
+      outline: none;
+      height: 90px;
+      padding: 10px 20px 20px 20px;
+      @include fontAll(14px,400,#fff);
+      margin-bottom: 20px;
+      &::placeholder{
+          @include fontAll(14px,400,rgba(255, 255, 255, 0.7));
+      }
+  }
+
+  &__item__button__submit{
+      background-color: $red;
+      padding: 15px 32px;
+      @include fontAll(14px,normal,#FFFFFF);
+      line-height: 100%;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+  }
+
+  &__item__button{
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+  }
+
+  &__pro{
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      background-color:  #313030;
+      width: 100%;
+      height: auto;
+  }
+
+  &__pro__main{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      grid-gap: 20px;
+  }
+
+  &__pro__link{
+      @include fontAll(16px,400, rgba(255, 255, 255, 1));
+      line-height: 100%;
+      display: inline-block;
+      padding: 27px 0;
+  }
+
+  &__logo {
+     @include fiximg(220px, 76px, true);
+  }
+}
+
+
+//footer end
+
+
+
+
+// anemation start
+
+#preloder {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.loader {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 60px;
+  animation: loader 0.8s linear infinite;
+  -webkit-animation: loader 0.8s linear infinite;
+}
+
+@keyframes loader {
+  0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+      border: 4px solid #f44336;
+      border-left-color: transparent;
+  }
+
+  50% {
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
+      border: 4px solid #673ab7;
+      border-left-color: transparent;
+  }
+
+  100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+      border: 4px solid #f44336;
+      border-left-color: transparent;
+  }
+}
+
+@-webkit-keyframes loader {
+  0% {
+      -webkit-transform: rotate(0deg);
+      border: 4px solid #f44336;
+      border-left-color: transparent;
+  }
+
+  50% {
+      -webkit-transform: rotate(180deg);
+      border: 4px solid #673ab7;
+      border-left-color: transparent;
+  }
+
+  100% {
+      -webkit-transform: rotate(360deg);
+      border: 4px solid #f44336;
+      border-left-color: transparent;
+  }
+}
+
+
+// anemation end
+
+
+
+@media (max-width:1700px){
+  .about__item {
+    width: 48%;
+    flex: 0 0 48%;
+  } 
+  
+  .about__item2 {
+    width: 48%;
+    flex: 0 0 48%;
+  }
+
+  .about__image {
+    width: 700px;
+    height: 600px;
+    position: initial;
+  }
+
+  .about__image img {
+    width: 700px;
+    height: 600px;
+}
+}
+
+
+@media (max-width: 1450px){
+    .header__top,
+    .slaeder__item__text,
+    .hilton__top,
+    .hilton__pro,
+    .Our_services__pro,
+    .Our_services__top,
+    .Our_partners__top,
+    .Our_partners__pro,
+    .footer__top,
+    .footer__pro__main
+     {
+      margin-left: 60px;
+      margin-right: 60px;
+    }
+
+    .about__top {
+      margin-left: 60px;
+    }
+
+    .Our_partners__image{
+      width: 170px;
+    }
+
+    .Our_partners__item {
+      width: 260px;
+      height: 180px;
+  }
+
+  .about__image {
+    width: 50%;
+    height: 600px;
+    position: initial;
+  }
+
+.about__image img {
+  width: 46%;
+  height: 600px;
+}
+}
+
+@media (max-width: 1300px){
+   .slaeder__title__h2 {
+      font-size: 75px;
+   }
+   .about__title {
+     font-size: 40px;
+   }  
+
+   .hilton__title__h2 {
+     font-size: 22px;
+   }
+
+   
+ .slaeder__pro {
+  position: relative;
+  height: 650px;
+ }
+
+  .slaeder,
+  .about,
+  .hilton,
+  .Our_services   {
+   margin-bottom: 60px;
+  }
+
+  .Our_services  {
+    padding-bottom: 70px;
+    padding-top: 60px;
+  }
+
+  .footer {
+    padding: 60px 0;
+  }
+
+  .Our_services__border {
+    padding: 30px 40px 30px 50px;
+  }
+
+  .Our_services__image {
+    width: 600px;
+    height: 300px;
+}
+
+  .hilton__image {
+    height: 300px;
+  }
+
+  .about__image,
+  .about__image img {
+    height: 550px;
+  }
+}
+
+@media (max-width: 1230px){
+  .Our_partners__item {
+    width: 230px;
+    height: 150px;
+  }
+
+  .Our_partners__image  {
+    width: 160px; 
+  }
+
+  .footer__item__input,
+  .footer__item__form  {
+    width: 100%;
+  }
+
+  .footer__top,
+  .hilton__top   {
+    grid-gap: 40px;
+  }
+
+  .hilton__item {
+    width: 47%;
+  }
+
+ 
+}
+
+
+@media (max-width: 1000px) {
+  .slaeder__pro {
+    height: 550px;
+  }
+
+  .slaeder__title__h2 {
+    font-size: 55px;
+  }
+
+  .slaeder__text {
+    font-size: 16px;
+    padding-top: 8px;
+  }
+
+  .about__title {
+    font-size: 34px;
+    line-height: 100%;
+  }
+
+  .about__text {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .about__title {
+    margin-bottom: 20px;
+  }
+
+  .about__image, .about__image img {
+    height: 450px;
+  }
+
+  .hilton__title__h2 {
+    font-size: 20px;
+  }
+
+  .hilton__title__h3 {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  .hilton__image {
+    height: 250px;
+  }
+
+  .hilton__menu__item h5 {
+    font-size: 14px;
+
+  .hilton__menu__item img {
+    width: 20px;
+    height: 20px;
+    } 
+  }
+
+  .Our_services__title__3 {
+    margin-bottom: 10px;
+    font-size: 22px;
+    line-height: 100%;
+  }
+
+  .Our_services__text {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .Our_partners__item {
+    width: 230px;
+    height: 130px;
+  }
+
+  .footer__top {
+    flex-wrap: wrap;
+    grid-gap: 50px;
+  }
+
+
+}
+
+
+@media (max-width: 900px){
+  .header__menu {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    grid-gap: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    height: 100%;
+    width: 50%;
+    padding: 40px;
+    z-index: 100;
+  }
+
+  .header__menu li:hover > .header__link::after{
+    display: none;
+  }
+
+  .header__mrx__max__burger{
+    display: block;
+    padding: 35px 0;
+  }
+
+  .header__menu li + li {
+    margin-left: 0;
+   }
+   .header__link  {
+     padding: 20px 0;
+   }
+
+   .slaeder__pro {
+    height: 420px;
+   }
+
+   .slaeder__title__h2 {
+    font-size: 40px;
+  }
+
+  .slaeder__top .slick-next,
+  .slaeder__top .slick-prev {
+    width: 21px;
+    height: 48px;
+  }
+
+  .about__title {
+    font-size: 30px;
+    line-height: 100%;
+  }
+
+  .about__text span {
+    font-size: 14px;
+  } 
+
+  .footer__logo {
+    width: 180px;
+    height: 62px;
+  }
+
+  .footer__pro__link {
+    font-size: 14px;
+  } 
+}
+
+
+@media (max-width: 800px) {
+    .about__top {
+      flex-direction: column;
+    }
+
+    .about__item,
+    .about__item2 {
+      width: 100%;
+      flex: 0 0 100%;
+    }
+
+    .about__image img {
+      width: 100%;
+      position: relative;
+      height: auto;
+    }
+
+    .about__image{
+      height: auto;
+      width: 100%;
+  }
+  .about__top {
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+
+
+  .hilton__top {
+    flex-direction: column;
+  }
+   
+  .hilton__item {
+    width: 100%;
+  }
+  .hilton__image {
+    height: 300px;
+  }
+
+  .Our_services__item {
+    flex-direction: column;
+  } 
+
+  .Our_services__image {
+    width: 100%;
+    height: auto;
+  }
+
+  .Our_services__item:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .header__logo {
+    width: 180px;
+    height: 62px;
+  }
+}
+
+
+@media (max-width: 650px){
+  .slaeder__pro {
+    height: 360px;
+  }
+
+
+  .slaeder__title__h2 {
+    font-size: 36px;
+  }
+  
+  .slaeder__top .slick-next,
+  .slaeder__top .slick-prev {
+    width: 15px;
+    height: 42px;
+  }
+
+  .header__menu {
+    width: 70%;
+  } 
+
+  .slaeder, .about, .hilton, .Our_services {
+    margin-bottom: 30px;
+  }
+
+  .Our_services {
+    padding-bottom: 40px;
+    padding-top: 30px;
+  }
+
+  .Our_partners {
+    margin-bottom: 30px;
+  }
+
+  .footer {
+    padding: 30px 0;
+   }
+
+   .footer__pro__link {
+    font-size: 12px;
+  }
+
+  .header__top, .slaeder__item__text, .hilton__top, .hilton__pro, .Our_services__pro, .Our_services__top, .Our_partners__top, .Our_partners__pro, .footer__top, .footer__pro__main,
+  .about__top {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .slaeder__item__text {
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+
+  .Our_services__border {
+    padding: 20px 20px 20px 30px;
+
+    .Our_services__title__3::before {
+     width: 20px;
+     height: 15px;
+     left: -30px;
+  } 
+}
+}
+
+
+@media (max-width: 600px){
+  .slaeder__title__h2 {
+    font-size: 30px;
+   }
+
+   .about__title{
+     font-size: 26px;
+     padding-left: 30px;
+   }
+
+   .about__title::before {
+     width: 14px;
+     height: 14px;
+   }
+
+  .hilton__menu__item img {
+      width: 16px;
+      height: 16px;
+  }
+
+}
+
+
+
+@media (max-width: 540px){
+  .Our_partners__item {
+    width: 200px;
+    height: 120px;
+  }
+
+  .Our_partners__image {
+    width: 100%;
+    height: auto;
+  }
+ 
+}
+
+
+@media (max-width: 450px){
+  .slaeder__pro {
+    height: 300px;
+  }
+
+  .slaeder__title__h2,
+  .about__title {
+    font-size: 24px;
+  }
+
+  .slaeder__title__h2::before  {
+    width: 14px;
+    height: 14px;
+  }
+
+  .hilton__menu  {
+    grid-gap: 20px;
+  }
+
+
+  .Our_partners__top {
+    justify-content: center;
+  }
+
+
+  .header__menu {
+    width: 80%;
+  }
+
+}
+
+
+@media (max-width: 380px){
+  .slaeder__title__h2, .about__title {
+    font-size: 22px;
+  }
+
+  .hilton__image {
+    height: 200px;
+  }
+
+  .footer__pro__main {
+    justify-content: center;
+    grid-gap: 0px;
+    flex-direction: column;
+  }
+
+  .footer__pro__link {
+    padding: 18px 0;
+  }
+
+  .footer__item {
+    width: 100%;
+  }
+
+  .header__logo,
+  .footer__logo {
+    width: 160px;
+    height: 55px;
+  }
+
+  .footer__item__menu__link li + li {
+    margin-top: 25px;
+  }
+}

@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/slick.css" />
+    <title>Hilton</title>
+  </head>
+  <body>
+    <!-- header start -->
+
+    <div id="preloder">
+      <div class="loader"></div>
+    </div>
+
+    <header class="header">
+      <section class="container">
+        <div class="header__top">
+          <div class="header__logo">
+            <a href="#!"><img src="foto/logo.svg" alt="logo" /></a>
+          </div>
+
+          <div class="header__item">
+            <ul class="header__menu">
+              <li>
+                <a href="#!" class="header__link" onclick="slowScroll('#about')"
+                  >Об отеле</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#!"
+                  class="header__link"
+                  onclick="slowScroll('#guiding')"
+                  >Номера
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#!"
+                  class="header__link"
+                  onclick="slowScroll('#services')"
+                  >Услуги</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#!"
+                  class="header__link"
+                  onclick="slowScroll('#partners')"
+                  >Контакты</a
+                >
+              </li>
+            </ul>
+
+            <div class="header__mrx__max__burger">
+              <a class="header__menu__burger menu__burger__x" href="#!"><i class="fas fa-times"></i></a>
+              <a class="header__menu__burger menu__burger__burger" href="#!"><i class="fas fa-bars"></i></a>
+           </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <!-- header end -->
+
+    <!-- sleader start -->
+
+    <div class="slaeder">
+      <div class="slaeder__top">
+        <div
+          class="slaeder__item"
+          style="background-image: url(foto/item_1.png)"
+        >
+          <section class="container">
+            <div class="slaeder__pro">
+              <div class="slaeder__item__text">
+                <h2 class="slaeder__title__h2">Hilton Garden Inn</h2>
+                <div class="slaeder__text">
+                  <p>Роскошные апартаменты</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- sleader end -->
+
+    <!-- about start -->
+
+    <div class="about" id="about">
+      <section class="container">
+        <div class="about__top">
+          <div class="about__item">
+            <h2 class="about__title">Об отеле</h2>
+            <div class="about__text">
+              <p>
+                <span>Hilton Garden Inn</span> - это американская сеть отелей
+                среднего ценового сегмента, а также специализированными
+                услугами, принадлежащая Hilton Worldwide. Наш отель "Hilton
+                Garden Inn Samarkand" является официальной франшизой в
+                Самарканде. Расположен наш отель в центре города, а также в
+                шаговой доступности от главных исторических
+                достопримечательностей, таких как площадь Регистан, Мавзолей
+                Амира Темура, Мавзолей Ал-Мотрудий. Ещё одним из главных
+                преимуществ является то,что "Hilton Garden Inn Samarkand"
+                находится всего в 1.5 км от Международного Аэропорта Самарканда.
+                Территория отеля занимает около 1.5 ГА. Отель состоит из 7
+                этажей, 6-и наземных и одного подземного этажей. Общая площадь
+                отеля более 11.000 м2. В отеле имеются <span>163</span> номера,
+                из которых: <span>156</span> - это стандартные номера "King-size
+                bed"; <span>2</span> - для людей с особенными потребностями;
+                <span>4</span> - Люкса "Junior suit"; <span>1</span> -
+                "Executive suit". В отеле будут функционировать ресторан,бар,
+                фитнес-зал, СПА, бассейн, сауны и турецкие хаммамы, а также ряд
+                других спектров услуг.
+              </p>
+            </div>
+          </div>
+
+          <div class="about__item2">
+            <div class="about__image">
+              <img src="foto/about.png" alt="about" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- about end -->
+
+    <!-- hilton start -->
+
+    <div class="hilton" id="guiding">
+      <section class="container">
+        <div class="hilton__pro">
+          <h2 class="about__title">Номера</h2>
+        </div>
+
+        <div class="hilton__top">
+          <div class="hilton__item">
+            <div class="hilton__max">
+              <div class="hilton__image">
+                <img src="foto/hilton1.png" alt="hilton1" />
+                <h4 class="hilton__title__h4">Завтрак включен</h4>
+              </div>
+            </div>
+
+            <h2 class="hilton__title__h2">King-size bed</h2>
+            <h3 class="hilton__title__h3">Стандартный номер</h3>
+
+            <ul class="hilton__menu">
+              <li class="hilton__menu__item">
+                <span><img src="foto/m1.svg" alt="m1" /></span>
+                <h5>Площадь 24m</h5>
+              </li>
+              <li class="hilton__menu__item">
+                <span><img src="foto/m3.svg" alt="m1" /></span>
+                <h5>Ванна</h5>
+              </li>
+              <li class="hilton__menu__item">
+                <span><img src="foto/m4.svg" alt="m1" /></span>
+                <h5>Кондиционер</h5>
+              </li>
+              <li class="hilton__menu__item">
+                <span><img src="foto/m5.svg" alt="m1" /></span>
+                <h5>Вид из окна</h5>
+              </li>
+              <li class="hilton__menu__item">
+                <span><img src="foto/m6.svg" alt="m1" /></span>
+                <h5>Телевизор</h5>
+              </li>
+              <li class="hilton__menu__item">
+                <span><img src="foto/m7.svg" alt="m1" /></span>
+                <h5>Бесплатный Wi-Fi</h5>
+              </li>
+              <li class="hilton__menu__item">
+                <span><img src="foto/m8.svg" alt="m1" /></span>
+                <h5>Парковка</h5>
+              </li>
+            </ul>
+          </div>
+
+          <div class="hilton__item">
+            <div class="hilton__max">
+              <div class="hilton__image">
+                <img src="foto/hilton2.png" alt="hilton1" />
+                <h4 class="hilton__title__h4">Завтрак включен</h4>
+              </div>
+            </div>
+
+            <h2 class="hilton__title__h2">
+              Для людей с особенными потребностями
+            </h2>
+            <h3 class="hilton__title__h3">
+              Для людей с особенными потребностями
+            </h3>
+
+            <ul class="hilton__menu">
+              <li class="hilton__menu__item">
+                <span><img src="foto/m1.svg" alt="m1" /></span>
+                <h5>Площадь 24m</h5>
+              </li>
+              <li class="hilton__menu__item">
+                <span><img src="foto/m3.svg" alt="m1" /></span>
+                <h5>Ванна</h5>
+              </li>
+              <li class="hilton__menu__item">
+                <span><img src="foto/m4.svg" alt="m1" /></span>
+                <h5>Кондиционер</h5>
+              </li>
+              <li class="hilton__menu__item">
+                <span><img src="foto/m5.svg" alt="m1" /></span>
+                <h5>Вид из окна</h5>
+              </li>
+              <li class="hilton__menu__item">
+                <span><img src="foto/m6.svg" alt="m1" /></span>
+                <h5>Телевизор</h5>
+              </li>
+              <li class="hilton__menu__item">
+                <span><img src="foto/m7.svg" alt="m1" /></span>
+                <h5>Бесплатный Wi-Fi</h5>
+              </li>
+              <li class="hilton__menu__item">
+                <span><img src="foto/m8.svg" alt="m1" /></span>
+                <h5>Парковка</h5>
+              </li>
+            </ul>
+          </div>
+
+          <div class="hilton__item">
+            <div class="hilton__max">
+              <div class="hilton__image">
+                <img src="foto/hilton3.png" alt="hilton1" />
+                <h4 class="hilton__title__h4">Завтрак включен</h4>
+              </div>
+            </div>
+
+            <h2 class="hilton__title__h2">Junior suit</h2>
+            <h3 class="hilton__title__h3">Люкс</h3>
+
+            <ul class="hilton__menu">
+              <li class="hilton__menu__item">
+                <span><img src="foto/m1.svg" alt="m1" /></span>
+                <h5>Площадь 24m</h5>
+              </li>
+              <li class="hilton__menu__item">
+                <span><img src="foto/m3.svg" alt="m1" /></span>
+                <h5>Ванна</h5>
+              </li>
+              <li class="hilton__menu__item">
+                <span><img src="foto/m4.svg" alt="m1" /></span>
+                <h5>Кондиционер</h5>
+              </li>
+              <li class="hilton__menu__item">
+                <span><img src="foto/m5.svg" alt="m1" /></span>
+                <h5>Вид из окна</h5>
+              </li>
+              <li class="hilton__menu__item">
+                <span><img src="foto/m6.svg" alt="m1" /></span>
+                <h5>Телевизор</h5>
+              </li>
+              <li class="hilton__menu__item">
+                <span><img src="foto/m7.svg" alt="m1" /></span>
+                <h5>Бесплатный Wi-Fi</h5>
+              </li>
+              <li class="hilton__menu__item">
+                <span><img src="foto/m8.svg" alt="m1" /></span>
+                <h5>Парковка</h5>
+              </li>
+            </ul>
+          </div>
+
+          <div class="hilton__item">
+            <div class="hilton__max">
+              <div class="hilton__image">
+                <img src="foto/hilton4.png" alt="hilton1" />
+                <h4 class="hilton__title__h4">Завтрак включен</h4>
+              </div>
+            </div>
+
+            <h2 class="hilton__title__h2">Executive suit</h2>
+            <h3 class="hilton__title__h3">Супер люкс</h3>
+
+            <ul class="hilton__menu">
+              <li class="hilton__menu__item">
+                <span><img src="foto/m1.svg" alt="m1" /></span>
+                <h5>Площадь 24m</h5>
+              </li>
+              <li class="hilton__menu__item">
+                <span><img src="foto/m3.svg" alt="m1" /></span>
+                <h5>Ванна</h5>
+              </li>
+              <li class="hilton__menu__item">
+                <span><img src="foto/m4.svg" alt="m1" /></span>
+                <h5>Кондиционер</h5>
+              </li>
+              <li class="hilton__menu__item">
+                <span><img src="foto/m5.svg" alt="m1" /></span>
+                <h5>Вид из окна</h5>
+              </li>
+              <li class="hilton__menu__item">
+                <span><img src="foto/m6.svg" alt="m1" /></span>
+                <h5>Телевизор</h5>
+              </li>
+              <li class="hilton__menu__item">
+                <span><img src="foto/m7.svg" alt="m1" /></span>
+                <h5>Бесплатный Wi-Fi</h5>
+              </li>
+              <li class="hilton__menu__item">
+                <span><img src="foto/m8.svg" alt="m1" /></span>
+                <h5>Парковка</h5>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- hilton end -->
+
+    <!-- Our_services start-->
+
+    <div
+      class="Our_services"
+      id="services"
+      style="background-image: url(foto/kFon.png)"
+    >
+      <section class="container">
+        <div class="Our_services__pro">
+          <h2 class="about__title Our_services__title__h2">Наши услуги</h2>
+        </div>
+
+        <div class="Our_services__top">
+          <div class="Our_services__item">
+            <div class="Our_services__image">
+              <img src="foto/fonichi1.png" alt="fonichi1" />
+            </div>
+
+            <div class="Our_services__border">
+              <h3 class="Our_services__title__3">Бар</h3>
+              <div class="Our_services__text">
+                <p>
+                  Бар интересен своим необычным обликом и архитектурным
+                  строением. Вход в бар сопровождается коридором, полностью
+                  покрытым зеркалами, ведущим к главному холлу. создает приятную
+                  и уютную атмосферу, что идеально подходит для приятного
+                  времяпрепровождения в конце дня в сопровождении друзей и под
+                  звуки хорошей музыки. Планировка бара поражает своей красотой
+                  и архитектурой.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="Our_services__item">
+            <div class="Our_services__image">
+              <img src="foto/fonichi2.png" alt="fonichi2" />
+            </div>
+
+            <div class="Our_services__border">
+              <h3 class="Our_services__title__3">Бассейн</h3>
+              <div class="Our_services__text">
+                <p>
+                  Бассейн — это лучший отдых для отдыхающих разных возрастов, в
+                  нем всегда можно поплескаться и не бояться волн. Бассейн —
+                  лучшее лекарство от плохого настроения или депрессии, ведь
+                  вода обладает успокаивающими свойствами. В воде мы чувствуем
+                  себя, как в родной стихии (не стоит забывать, что человек на
+                  70-80% состоит из воды). Наш бассейн — это маленький уголок
+                  сильной и властной стихии. После пребывания в воде вы
+                  насытитесь жизненно необходимой энергией и силой. А после
+                  отдыха на террасе возле бассейна ваш организм будет полностью
+                  обновлен.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Our_services end-->
+
+    <!-- Our_partners start-->
+
+    <div class="Our_partners" id="partners">
+      <section class="container">
+        <div class="Our_partners__pro">
+          <h2 class="about__title">Наши контакти</h2>
+        </div>
+
+        <div class="Our_partners__top">
+          <div class="Our_partners__item">
+            <div class="Our_partners__image">
+              <img src="foto/partners 4.svg" alt="partners 4" />
+            </div>
+          </div>
+
+          <div class="Our_partners__item">
+            <div class="Our_partners__image">
+              <img src="foto/partners 1.svg" alt="partners 1" />
+            </div>
+          </div>
+
+          <div class="Our_partners__item">
+            <div class="Our_partners__image">
+              <img src="foto/partners 2.svg" alt="partners 2" />
+            </div>
+          </div>
+
+          <div class="Our_partners__item">
+            <div class="Our_partners__image">
+              <img src="foto/partners 3.svg" alt="partners 3" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Our_partners end-->
+
+    <!-- footer start -->
+
+    <footer>
+      <div class="footer">
+        <section class="container">
+          <div class="footer__top">
+            <div class="footer__item">
+              <div class="footer__logo">
+                <a href="#!" onclick="slowScroll('#logo')"
+                  ><img src="foto/footer logo.svg" alt="footer"
+                /></a>
+              </div>
+
+              <ul class="footer__menu__icons">
+                <li>
+                  <a href="#!" class="footer__icon__link"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#!" class="footer__icon__link"
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#!" class="footer__icon__link"
+                    ><i class="fab fa-telegram-plane"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="footer__item">
+              <ul class="footer__item__menu__link">
+                <li>
+                  <a href="tel:+998 97 928 39 99" class="footer__item__link"
+                    ><span><i class="fas fa-phone-alt"></i></span>+998 97 928 39
+                    99</a
+                  >
+                </li>
+                <li>
+                  <a class="footer__item__link"
+                    ><span><i class="fas fa-map-marker-alt"></i></span>
+                    УЗБЕКИСТАН, г. Самарканд, м-в Агалык
+                  </a>
+                </li>
+                <li>
+                  <a href="mailto:info@sos.uz" class="footer__item__link"
+                    ><span><i class="fas fa-envelope"></i></span>
+                    dilshod.rakhmatov@mironkul.uz</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="footer__item">
+              <form action="#!">
+                <div class="footer__item__form">
+                  <div>
+                    <input
+                      class="footer__item__input"
+                      type="text"
+                      placeholder="ФИО"
+                    />
+                  </div>
+                  <div>
+                    <input
+                      class="footer__item__input"
+                      type="text"
+                      placeholder="Email"
+                    />
+                  </div>
+                </div>
+
+                <textarea
+                  class="footer__item__textarea"
+                  placeholder="Сообщение"
+                ></textarea>
+
+                <div class="footer__item__button">
+                  <button type="submit" class="footer__item__button__submit">
+                    Отправить
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="footer__pro">
+        <section class="container">
+          <div class="footer__pro__main">
+            <div>
+              <a href="#!" class="footer__pro__link"
+                >«Hilton Garden Inn» Все права защищены</a
+              >
+            </div>
+            <div>
+              <a href="#!" class="footer__pro__link"
+                >© Copyright 2022 - Web developed by SOS Group</a
+              >
+            </div>
+          </div>
+        </section>
+      </div>
+    </footer>
+
+    <!-- footer end -->
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+      function slowScroll(id) {
+        $('html,bode').animate(
+          {
+            scrollTop: $(id).offset().top,
+          },
+          600
+        )
+      }
+      $(document).on('scroll', function () {
+        if ($(window).scrollTop() === 0) $('header').removeClass('fixed')
+        else $('header').attr('class', 'fixed')
+      })
+    </script>
+  </body>
+</html>
